@@ -5,7 +5,7 @@ import br.com.psouza.domain.Cliente;
 import java.sql.SQLException;
 import java.util.List;
 
-public interface IClienteDAO {
+public interface IGenericDAO {
     public Integer cadastrar(Cliente cliente) throws Exception;
 
     public Integer atualizar(Cliente cliente) throws Exception;

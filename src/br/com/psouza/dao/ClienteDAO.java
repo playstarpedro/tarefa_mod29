@@ -10,7 +10,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
 
-public class ClienteDAO implements IClienteDAO {
+public class ClienteDAO implements IGenericDAO {
 
     @Override
     public Integer cadastrar(Cliente cliente) throws SQLException {

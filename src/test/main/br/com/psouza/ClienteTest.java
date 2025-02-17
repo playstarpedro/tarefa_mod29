@@ -1,11 +1,10 @@
 package test.main.br.com.psouza;
 
 import br.com.psouza.dao.ClienteDAO;
-import br.com.psouza.dao.IClienteDAO;
+import br.com.psouza.dao.IGenericDAO;
 import br.com.psouza.domain.Cliente;
 import org.junit.Test;
 
-import java.sql.SQLException;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -13,7 +12,7 @@ import static org.junit.Assert.*;
 public class ClienteTest {
     @Test
     public void cadastrarTest() throws Exception {
-        IClienteDAO dao = new ClienteDAO();
+        IGenericDAO dao = new ClienteDAO();
 
         Cliente cliente = new Cliente();
         cliente.setCodigo("01");
@@ -34,7 +33,7 @@ public class ClienteTest {
 
     @Test
     public void testConsultar() throws Exception {
-        IClienteDAO dao = new ClienteDAO();
+        IGenericDAO dao = new ClienteDAO();
         Cliente cliente = new Cliente();
         cliente.setCodigo("01");
         cliente.setNome("Pedro");
@@ -52,7 +51,7 @@ public class ClienteTest {
 
     @Test
     public void testExcluir() throws Exception {
-        IClienteDAO dao = new ClienteDAO();
+        IGenericDAO dao = new ClienteDAO();
 
         Cliente cliente = new Cliente();
         cliente.setCodigo("01");
@@ -67,7 +66,7 @@ public class ClienteTest {
 
     @Test
     public void testBuscarTodos() throws Exception {
-        IClienteDAO dao = new ClienteDAO();
+        IGenericDAO dao = new ClienteDAO();
         Cliente cliente1 = new Cliente();
         Cliente cliente2 = new Cliente();
         cliente1.setCodigo("01");
@@ -92,7 +91,7 @@ public class ClienteTest {
 
     @Test
     public void testAtualizar() throws Exception {
-        IClienteDAO dao = new ClienteDAO();
+        IGenericDAO dao = new ClienteDAO();
         Cliente cliente = new Cliente();
         cliente.setCodigo("01");
         cliente.setNome("Pedro");
