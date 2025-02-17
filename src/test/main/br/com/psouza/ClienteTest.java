@@ -21,7 +21,7 @@ public class ClienteTest {
         Integer qtd = dao.cadastrar(cliente);
         assertTrue(qtd == 1);
 
-        Cliente clienteBD = dao.consultar(cliente.getCodigo());
+        Cliente clienteBD = (Cliente) dao.consultar(cliente.getCodigo());
         assertNotNull(clienteBD);
         assertNotNull(clienteBD.getId());
         assertEquals(cliente.getCodigo(), clienteBD.getCodigo());
@@ -41,7 +41,7 @@ public class ClienteTest {
         Integer qtd = dao.cadastrar(cliente);
         assertTrue(qtd == 1);
 
-        Cliente clienteBuscado = dao.consultar(cliente.getCodigo());
+        Cliente clienteBuscado = (Cliente) dao.consultar(cliente.getCodigo());
         assertEquals(clienteBuscado.getCodigo(), cliente.getCodigo());
         assertEquals(clienteBuscado.getNome(), cliente.getNome());
 
@@ -104,7 +104,7 @@ public class ClienteTest {
         assertTrue(qtd == 1);
         Integer qtdUpdated = dao.atualizar(updatedClient);
 
-        Cliente clienteBuscado = dao.consultar(updatedClient.getCodigo());
+        Cliente clienteBuscado = (Cliente) dao.consultar(updatedClient.getCodigo());
         assertNotNull(clienteBuscado);
         assertEquals(clienteBuscado.getCodigo(), updatedClient.getCodigo());
         assertEquals(clienteBuscado.getNome(), updatedClient.getNome());
